@@ -20,27 +20,37 @@ const Index = () => {
 
       {/* Hero Section */}
       <section 
-        className="relative bg-gradient-hero text-primary-foreground py-16 md:py-24 overflow-hidden"
+        className="relative bg-primary text-primary-foreground py-12 md:py-20 overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(135deg, rgba(139, 0, 139, 0.85) 0%, rgba(139, 0, 139, 0.7) 100%), url(${heroImage})`,
+          backgroundImage: `linear-gradient(90deg, hsl(142 71% 45%) 0%, hsl(142 71% 45%) 40%, transparent 100%), url(${heroImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-2xl">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in drop-shadow-lg">
-              Fresh Groceries Delivered in Minutes
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <div className="max-w-xl lg:max-w-2xl">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-4 animate-fade-in drop-shadow-lg leading-tight">
+              Groceries delivered in{' '}
+              <span className="text-accent">10 minutes</span>
             </h1>
-            <p className="text-lg md:text-xl mb-6 opacity-95 animate-fade-in drop-shadow-md">
-              Order from a wide range of fresh vegetables, fruits, dairy products, and daily essentials
+            <p className="text-base sm:text-lg md:text-xl mb-6 md:mb-8 opacity-95 animate-fade-in drop-shadow-md max-w-md">
+              Get your daily essentials delivered super fast to your doorstep
             </p>
-            <Button 
-              size="lg" 
-              className="bg-accent hover:bg-accent/90 text-accent-foreground gap-2 animate-scale-in shadow-lg"
-            >
-              Start Shopping <ArrowRight className="h-5 w-5" />
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 animate-scale-in">
+              <Button 
+                size="lg" 
+                className="bg-white hover:bg-white/90 text-primary font-semibold shadow-lg text-base md:text-lg px-6 md:px-8"
+              >
+                Shop Now
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="border-2 border-white bg-transparent text-white hover:bg-white/10 font-semibold text-base md:text-lg px-6 md:px-8"
+              >
+                Download App
+              </Button>
+            </div>
           </div>
         </div>
       </section>
