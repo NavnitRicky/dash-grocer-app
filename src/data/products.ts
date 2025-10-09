@@ -30,17 +30,67 @@ export interface Category {
   id: string;
   name: string;
   icon: string;
+  gradient: string;
+  image: string;
 }
 
 export const categories: Category[] = [
-  { id: 'vegetables', name: 'Vegetables', icon: '🥬' },
-  { id: 'fruits', name: 'Fruits', icon: '🍎' },
-  { id: 'dairy', name: 'Dairy', icon: '🥛' },
-  { id: 'snacks', name: 'Snacks', icon: '🍿' },
-  { id: 'beverages', name: 'Beverages', icon: '🥤' },
-  { id: 'bakery', name: 'Bakery', icon: '🍞' },
-  { id: 'personal-care', name: 'Personal Care', icon: '🧴' },
-  { id: 'home-care', name: 'Home Care', icon: '🧹' },
+  { 
+    id: 'vegetables', 
+    name: 'Fruits & Vegetables', 
+    icon: '🥬',
+    gradient: 'linear-gradient(135deg, #0C831F 0%, #4CAF50 100%)',
+    image: capsicumImg
+  },
+  { 
+    id: 'dairy', 
+    name: 'Dairy, Bread & Eggs', 
+    icon: '🥛',
+    gradient: 'linear-gradient(135deg, #F8E231 0%, #FDD835 100%)',
+    image: milkImg
+  },
+  { 
+    id: 'snacks', 
+    name: 'Snacks & Munchies', 
+    icon: '🍿',
+    gradient: 'linear-gradient(135deg, #D32F2F 0%, #F44336 100%)',
+    image: chipsImg
+  },
+  { 
+    id: 'beverages', 
+    name: 'Cold Drinks & Juices', 
+    icon: '🥤',
+    gradient: 'linear-gradient(135deg, #1976D2 0%, #2196F3 100%)',
+    image: energyDrinkImg
+  },
+  { 
+    id: 'bakery', 
+    name: 'Bakery & Biscuits', 
+    icon: '🍞',
+    gradient: 'linear-gradient(135deg, #E65100 0%, #FF9800 100%)',
+    image: cookiesImg
+  },
+  { 
+    id: 'fruits', 
+    name: 'Fresh Fruits', 
+    icon: '🍎',
+    gradient: 'linear-gradient(135deg, #C2185B 0%, #E91E63 100%)',
+    image: applesImg
+  },
+  { 
+    id: 'personal-care', 
+    name: 'Personal Care', 
+    icon: '🧴',
+    gradient: 'linear-gradient(135deg, #7B1FA2 0%, #9C27B0 100%)',
+    image: milkImg
+  },
+  { 
+    id: 'home-care', 
+    name: 'Home Care', 
+    icon: '🧹',
+    gradient: 'linear-gradient(135deg, #0097A7 0%, #00BCD4 100%)',
+    image: milkImg
+  },
 ];
 
 export const products: Product[] = [

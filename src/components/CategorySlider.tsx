@@ -1,25 +1,35 @@
 import { categories } from '@/data/products';
 import { Link } from 'react-router-dom';
-import { Card } from '@/components/ui/card';
 
 const CategorySlider = () => {
   return (
-    <section className="py-6">
+    <section className="py-10 bg-muted/30">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl font-bold mb-4 text-foreground">Shop by Category</h2>
-        <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide snap-x snap-mandatory">
+        <h2 className="text-3xl font-bold mb-8 text-foreground">Shop by Category</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-6">
           {categories.map((category) => (
             <Link
               key={category.id}
               to={`/category/${category.id}`}
-              className="flex-shrink-0 snap-start group"
+              className="group"
             >
-              <Card className="w-28 h-28 flex flex-col items-center justify-center gap-2 hover:shadow-lg transition-all duration-300 cursor-pointer bg-card border border-border/50 hover:-translate-y-1 rounded-2xl">
-                <span className="text-4xl group-hover:scale-110 transition-transform duration-300">{category.icon}</span>
-                <p className="text-xs font-semibold text-center text-foreground px-2">
-                  {category.name}
-                </p>
-              </Card>
+              <div 
+                className="relative rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer aspect-[3/4] flex flex-col"
+                style={{ background: category.gradient }}
+              >
+                <div className="flex-1 flex items-center justify-center p-4">
+                  <img 
+                    src={category.image} 
+                    alt={category.name}
+                    className="w-full h-full object-contain drop-shadow-lg group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+                <div className="bg-white/95 backdrop-blur-sm p-3 text-center">
+                  <h3 className="font-bold text-sm text-foreground leading-tight">
+                    {category.name}
+                  </h3>
+                </div>
+              </div>
             </Link>
           ))}
         </div>
