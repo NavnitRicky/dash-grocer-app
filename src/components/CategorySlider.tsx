@@ -12,11 +12,11 @@ const CategorySlider = () => {
             <Link
               key={category.id}
               to={`/category/${category.id}`}
-              className="flex-shrink-0 snap-start"
+              className="flex-shrink-0 snap-start group"
             >
-              <Card className="w-24 h-24 flex flex-col items-center justify-center gap-2 hover:shadow-md transition-all cursor-pointer bg-gradient-card border-border">
-                <span className="text-3xl">{category.icon}</span>
-                <p className="text-xs font-medium text-center text-foreground">
+              <Card className="w-28 h-28 flex flex-col items-center justify-center gap-2 hover:shadow-lg transition-all duration-300 cursor-pointer bg-card border border-border/50 hover:-translate-y-1 rounded-2xl">
+                <span className="text-4xl group-hover:scale-110 transition-transform duration-300">{category.icon}</span>
+                <p className="text-xs font-semibold text-center text-foreground px-2">
                   {category.name}
                 </p>
               </Card>

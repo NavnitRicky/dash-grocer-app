@@ -20,9 +20,9 @@ const Index = () => {
 
       {/* Hero Section */}
       <section 
-        className="relative bg-primary text-primary-foreground py-12 md:py-20 overflow-hidden"
+        className="relative bg-primary text-primary-foreground py-16 md:py-24 overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(90deg, hsl(142 71% 45%) 0%, hsl(142 71% 45%) 40%, transparent 100%), url(${heroImage})`,
+          backgroundImage: `linear-gradient(90deg, hsl(142 71% 45%) 0%, hsl(142 71% 45%) 45%, transparent 100%), url(${heroImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -56,35 +56,35 @@ const Index = () => {
       </section>
 
       {/* Features */}
-      <section className="py-8 border-b border-border">
+      <section className="py-10 border-b border-border/50 bg-gradient-to-b from-background to-muted/20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="flex items-center gap-4">
-              <div className="bg-secondary/10 p-3 rounded-full">
-                <Truck className="h-6 w-6 text-secondary" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="flex items-center gap-4 group">
+              <div className="bg-primary/10 p-4 rounded-2xl group-hover:bg-primary/15 transition-colors duration-300">
+                <Truck className="h-7 w-7 text-primary" />
               </div>
               <div>
-                <h3 className="font-semibold text-foreground">Free Delivery</h3>
+                <h3 className="font-bold text-foreground text-lg">Free Delivery</h3>
                 <p className="text-sm text-muted-foreground">On orders above ₹199</p>
               </div>
             </div>
 
-            <div className="flex items-center gap-4">
-              <div className="bg-primary/10 p-3 rounded-full">
-                <Clock className="h-6 w-6 text-primary" />
+            <div className="flex items-center gap-4 group">
+              <div className="bg-accent/10 p-4 rounded-2xl group-hover:bg-accent/15 transition-colors duration-300">
+                <Clock className="h-7 w-7 text-accent" />
               </div>
               <div>
-                <h3 className="font-semibold text-foreground">Fast Delivery</h3>
-                <p className="text-sm text-muted-foreground">Within 10-15 minutes</p>
+                <h3 className="font-bold text-foreground text-lg">10 Min Delivery</h3>
+                <p className="text-sm text-muted-foreground">Lightning fast service</p>
               </div>
             </div>
 
-            <div className="flex items-center gap-4">
-              <div className="bg-accent/10 p-3 rounded-full">
-                <Shield className="h-6 w-6 text-accent" />
+            <div className="flex items-center gap-4 group">
+              <div className="bg-secondary/10 p-4 rounded-2xl group-hover:bg-secondary/15 transition-colors duration-300">
+                <Shield className="h-7 w-7 text-secondary" />
               </div>
               <div>
-                <h3 className="font-semibold text-foreground">100% Safe</h3>
+                <h3 className="font-bold text-foreground text-lg">100% Safe</h3>
                 <p className="text-sm text-muted-foreground">Quality guaranteed</p>
               </div>
             </div>
@@ -96,11 +96,11 @@ const Index = () => {
       <CategorySlider />
 
       {/* Products */}
-      <section className="py-8">
+      <section className="py-10 bg-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-6 text-foreground">Featured Products</h2>
+          <h2 className="text-3xl font-bold mb-8 text-foreground">Featured Products</h2>
           
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-5">
             {featuredProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
